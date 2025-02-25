@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Drinks {
@@ -24,6 +25,8 @@ public class Drinks {
     public void setName(String name) {
         if (name != null && !name.isEmpty()){
             this.name = name;
+        } else {
+            throw new EmptyStackException();
         }
     }
 
@@ -34,6 +37,8 @@ public class Drinks {
     public void setPrice(int price) {
         if (price != 0){
             this.price = price;
+        } else {
+            throw new EmptyStackException();
         }
     }
 
@@ -44,6 +49,8 @@ public class Drinks {
     public void setVolume(double volume) {
         if (volume != 0 ){
             this.volume = volume;
+        } else {
+            throw new EmptyStackException();
         }
     }
 

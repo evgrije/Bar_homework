@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Bar {
@@ -19,6 +20,8 @@ public class Bar {
     public void setName(String name) {
         if (name != null && !name.isEmpty()){
             this.name = name;
+        } else {
+            throw new EmptyStackException();
         }
     }
 
