@@ -4,18 +4,13 @@ public class Main {
     public static void main (String[] args){
         Bar bar = new Bar("Bobr-kurva");
 
-        bar.setListOfBarmen(List.of(
+        bar.setListOfStaff(List.of(
                 new Barman("Musya", "Trofimova", 2),
-                new Barman("Kolyan", "Petrov", 1)
-        ));
-
-        bar.setManager(
-                new Manager("Tom", "Necruze", 5)
-        );
-
-        bar.setListOfTesterAlcohol(List.of(
+                new Barman("Kolyan", "Petrov", 1),
+                new Manager("Tom", "Necruze", 5),
                 new TesterAlcohol("George", "Necluni", 4),
                 new TesterAlcohol("Boris", "Gigi", 2)
+
         ));
 
         bar.setListOfDrinks(List.of(
@@ -34,9 +29,7 @@ public class Main {
            sum += bar.getListOfDrinks().get(i).getPrice();
 
         }
-        System.out.println("Итого:"+ " "+sum);
-
-
+        System.out.println("Итого:" + " " + sum);
 
     }
 }
